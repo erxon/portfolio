@@ -189,7 +189,7 @@ export default function Projects() {
         <p className="text-sm mb-4 text-neutral-700 dark:text-neutral-300">
           Built for clients
         </p>
-        <div className="flex gap-4 items-center border-b-2 mb-4 w-1/4">
+        <div className="flex gap-4 items-center border-b-2 mb-4 w-full md:w-1/2 lg:w-1/4">
           <p className="grow-1">Judelu - Landing Page 2023</p>
           <Button
             variant="link"
