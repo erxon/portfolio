@@ -22,7 +22,7 @@ export default function Home() {
           <Threads />
         </div>
       </motion.div>
-      <div className="absolute z-10 h-[500px] md:w-3/4 lg:w-1/2 flex flex-col justify-center mx-6 md:mx-12 lg:mx-32 text-center md:text-start">
+      <div className="relative z-10 h-[500px] md:w-3/4 lg:w-1/2 flex flex-col justify-center mx-6 md:mx-12 lg:mx-32 text-center md:text-start">
         <motion.p className="text-3xl md:text-5xl mb-4 tracking-wide md:w-fit md:text-start">
           <motion.span
             initial={{ opacity: 0 }}
