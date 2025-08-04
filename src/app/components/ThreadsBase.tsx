@@ -135,7 +135,7 @@ const ThreadsBase: React.FC<ThreadsProps> = ({
   ...rest
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameId = useRef<number>(null);
+  const animationFrameId = useRef<number>(0);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -213,6 +213,7 @@ const ThreadsBase: React.FC<ThreadsProps> = ({
       renderer.render({ scene: mesh });
       animationFrameId.current = requestAnimationFrame(update);
     }
+
     animationFrameId.current = requestAnimationFrame(update);
 
     return () => {
