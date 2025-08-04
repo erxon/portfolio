@@ -28,7 +28,7 @@ function Project({
   return (
     <motion.div className="mx-auto w-full lg:w-250 p-4 lg:relative">
       <motion.div
-        className="display-none"
+        className="hidden lg:block"
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
