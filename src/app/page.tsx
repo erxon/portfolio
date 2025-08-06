@@ -12,12 +12,14 @@ export default function Page() {
         <div className="px-32 py-12">
           <Navigation />
         </div>
-        <Home />
+        <div id="home">
+          <Home />
+        </div>
       </div>
-      <div className="min-h-screen">
+      <div id="skills" className="min-h-screen">
         <SkillsAndTech />
       </div>
-      <div>
+      <div id="projects">
         <Projects />
       </div>
       <div>

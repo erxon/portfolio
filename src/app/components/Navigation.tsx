@@ -13,14 +13,14 @@ import Link from "next/link";
 export default function Navigation() {
   return (
     <div>
-      <NavigationMenu viewport={false}>
+      <NavigationMenu className="text-sm">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link href="/docs">Ericson</Link>
+              <Link href="#home">Ericson</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -28,7 +28,7 @@ export default function Navigation() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link href="/docs">Skills & Tech</Link>
+              <Link href="#skills">Skills & Tech</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem className="mr-2">
@@ -36,10 +36,10 @@ export default function Navigation() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link href="/docs">Projects</Link>
+              <Link href="#projects">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <div className="ml-auto">
+          <div className="">
             <ModeToggle />
           </div>
         </NavigationMenuList>
