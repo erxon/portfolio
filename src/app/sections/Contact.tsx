@@ -6,6 +6,7 @@ import InstagramIcon from "../components/InstagramIcon";
 
 import LinkedInIcon from "../components/LinkedInIcon";
 import { MailIcon, PhoneIcon } from "lucide-react";
+import GitHubIcon from "../components/GitHubIcon";
 
 export default function Contact() {
   return (
@@ -48,6 +49,13 @@ export default function Contact() {
             }}
           >
             <LinkedInIcon />
+          </Button>
+          <Button
+            variant={"ghost"}
+            size={"icon"}
+            onClick={() => window.open("https://github.com/erxon")}
+          >
+            <GitHubIcon reverse />
           </Button>
         </div>
       </div>
