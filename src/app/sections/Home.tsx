@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="z-10 h-[500px] md:w-3/4 lg:w-fit flex flex-col justify-center items-center mx-6 md:mx-12 lg:mx-[20%] text-center">
-        <motion.p className="text-3xl md:text-5xl mb-4 tracking-wide md:w-fit text-center">
+        <motion.p className="text-2xl md:text-5xl mb-4 tracking-wide md:w-fit text-center">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
