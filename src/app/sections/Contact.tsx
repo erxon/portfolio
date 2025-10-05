@@ -10,7 +10,7 @@ import GitHubIcon from "../components/GitHubIcon";
 
 export default function Contact() {
   return (
-    <div className="py-12 p-6 md:px-12 lg:px-32">
+    <div className="py-12 p-6 md:px-12 lg:px-[20%]">
       <p className="font-bold text-2xl mb-8">GET IN TOUCH</p>
       <div>
         <div className="flex gap-2 items-center">

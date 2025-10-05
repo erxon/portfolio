@@ -22,8 +22,8 @@ export default function Home() {
           <Threads />
         </div>
       </motion.div>
-      <div className="relative z-10 h-[500px] md:w-3/4 lg:w-1/2 flex flex-col justify-center mx-6 md:mx-12 lg:mx-32 text-center md:text-start">
-        <motion.p className="text-3xl md:text-5xl mb-4 tracking-wide md:w-fit md:text-start">
+      <div className="z-10 h-[500px] md:w-3/4 lg:w-fit flex flex-col justify-center items-center mx-6 md:mx-12 lg:mx-[20%] text-center">
+        <motion.p className="text-3xl md:text-5xl mb-4 tracking-wide md:w-fit text-center">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,7 +43,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="w-fit"
+          className="w-fit md:text-xl"
         >
           I&apos;m a{" "}
           <div className="relative inline-block">

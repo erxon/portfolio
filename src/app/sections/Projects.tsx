@@ -127,7 +127,7 @@ function Project({
 
 export default function Projects() {
   return (
-    <div className="py-12 px-6 md:px-12 lg:px-32 bg-neutral-100 dark:bg-background">
+    <div className="py-12 px-6 md:px-12 lg:px-[20%] bg-neutral-100 dark:bg-background">
       <p className="text-2xl font-bold mb-8">PROJECTS</p>
       <Project
         key={0}

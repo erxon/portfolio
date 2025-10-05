@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <div className="font-[family-name:var(--inter-font)]">
       <div className="min-h-screen">
-        <div className="px-32 py-12">
+        <div className="px-32 lg:px-[20%] py-12">
           <Navigation />
         </div>
         <div id="home">

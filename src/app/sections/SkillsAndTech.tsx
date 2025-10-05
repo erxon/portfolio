@@ -50,7 +50,7 @@ export default function SkillsAndTech() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="px-6 md:px-12 lg:px-32 mb-12 lg:mb-24"
+        className="px-6 md:px-12 lg:px-[20%] mb-12 lg:mb-24"
       >
         <p className="font-bold text-3xl mb-2">STACK</p>
         <p className="text-neutral-500 dark:text-neutral-300 text-sm w-full md:w-1/2">
@@ -62,7 +62,7 @@ export default function SkillsAndTech() {
           JavaScript, NoSQL, and SQL
         </p>
       </motion.div>
-      <div className="px-6 md:px-12 lg:px-32 flex flex-col gap-12">
+      <div className="px-6 md:px-12 lg:px-[20%] flex flex-col gap-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
