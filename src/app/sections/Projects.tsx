@@ -165,8 +165,8 @@ export default function Projects() {
           "Huggingface",
           "Groq",
         ]}
-        liveDemoLink="https://wise-notes-kappa.vercel.app/"
-        gitHubLink="https://github.com/erxon/wise-notes"
+        liveDemoLink="https://wise-notes-v2-8ppi.vercel.app/"
+        gitHubLink="https://github.com/erxon/wise-notes-v2.git"
       />
       <Project
         key={2}
