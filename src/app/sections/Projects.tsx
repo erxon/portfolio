@@ -195,7 +195,7 @@ export default function Projects() {
             variant="link"
             size={"sm"}
             onClick={() => {
-              window.open("https://judelu.onrender.com");
+              window.open("https://judelu-ma2k8cjil-erxons-projects.vercel.app/");
             }}
           >
             <SquareArrowOutUpRight />
