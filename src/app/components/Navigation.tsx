@@ -39,14 +39,6 @@ export default function Navigation() {
               <Link href="#projects">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <NavigationMenuItem className="mr-2">
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="./resume/resume.pdf" download>Resume </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
           <div className="">
             <ModeToggle />
           </div>
