@@ -5,7 +5,6 @@ interface Feature {
   description: string;
   videoUrl: string;
 }
-
 const features: Feature[] = [
   {
     title: "Notes",
