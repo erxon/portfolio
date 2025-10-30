@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <div>
+    <div className="">
       <NavigationMenu className="text-sm">
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -37,6 +37,14 @@ export default function Navigation() {
               className={navigationMenuTriggerStyle()}
             >
               <Link href="#projects">Projects</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem className="mr-2">
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <Link href="./resume/resume.pdf" download>Resume </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <div className="">

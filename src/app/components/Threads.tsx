@@ -15,7 +15,7 @@ export default function Threads() {
   return (
     <ThreadsBase
       color={currentTheme === "light" ? [0, 0, 0] : [1, 1, 1]}
-      amplitude={1}
+      amplitude={2}
       distance={0.1}
       enableMouseInteraction={true}
     />

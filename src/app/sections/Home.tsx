@@ -22,7 +22,8 @@ export default function Home() {
           <Threads />
         </div>
       </motion.div>
-      <div className="z-10 h-[500px] md:w-3/4 lg:w-fit flex flex-col justify-center items-center mx-6 md:mx-12 lg:mx-[20%] text-center">
+
+      <div className="z-20 h-[500px] md:w-fit flex flex-col justify-center items-center mx-6 md:mx-12 lg:mx-[20%] text-center text-balance mt-12">
         <motion.p className="text-2xl md:text-5xl mb-4 tracking-wide md:w-fit text-center">
           <motion.span
             initial={{ opacity: 0 }}
@@ -46,10 +47,10 @@ export default function Home() {
           className="w-fit md:text-xl"
         >
           I&apos;m a{" "}
-          <div className="relative inline-block">
+          <div className="relative inline-block text-balance">
             <motion.span
-              className="absolute inset-0 bg-blue-300 dark:bg-blue-500 rounded-sm z-0"
-              initial={{ scaleX: 0 }}
+              className="absolute inset-0 bg-cyan-500 dark:bg-blue-500 rounded-sm z-0"
+              initial={{ scaleX: 0, color: "#000" }}
               animate={{ scaleX: 1 }}
               transition={{
                 delay: 1,
@@ -58,12 +59,12 @@ export default function Home() {
               }}
               style={{ transformOrigin: "left" }}
             />
-            <span className="px-1 font-medium relative z-10 text-black dark:text-white">
+            <span className="px-1 font-medium relative z-10 dark:text-white">
               full-stack developer
             </span>
-          </div>
-          with a passion for building web applications that solves real-life
-          problems. I love exploring technologies and continuously improving my
+          </div>{" "}
+          with a passion for building applications, solving problems, and
+          learning. I love exploring technologies and continuously improving my
           craft.{" "}
         </motion.div>
       </div>

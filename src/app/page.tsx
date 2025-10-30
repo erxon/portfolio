@@ -14,7 +14,7 @@ export default function Page() {
         </div>
         <div id="home">
           <Home />
-        </div>
+        </div>{" "}
       </div>
       <div id="skills" className="min-h-screen">
         <SkillsAndTech />
