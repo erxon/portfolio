@@ -23,7 +23,6 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [showControls, setShowControls] = useState(true);
-  const [progressPercent, setProgressPercent] = useState(0);
 
   // Update progress bar as video plays
   useEffect(() => {
@@ -33,6 +32,11 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
     const updateProgress = () => {
       if (!isDragging) setCurrentTime(video.currentTime);
     };
+
+    if (video.duration) {
+      setDuration(video.duration);
+    }
+
     const setVideoDuration = () => setDuration(video.duration);
 
     video.addEventListener("timeupdate", updateProgress);
@@ -54,35 +58,6 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
 
     return () =>
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShowControls(true);
-
-            video.play().catch(() => {});
-            setIsPlaying(true);
-          } else {
-            setShowControls(false);
-            video.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      { threshold: 0.5 } // play when 50% visible
-    );
-
-    observer.observe(video);
-
-    return () => {
-      observer.disconnect();
-    };
   }, []);
 
   const updateTimeFromEvent = (e: MouseEvent<HTMLDivElement>) => {
@@ -155,9 +130,7 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
     }
   };
 
-  useEffect(() => {
-    setProgressPercent(duration > 0 ? (currentTime / duration) * 100 : 0);
-  }, [currentTime, duration]);
+  const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
     <div
@@ -166,16 +139,18 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
-      <video
-        ref={videoRef}
-        className="rounded-lg mb-4"
-        src={videoUrl}
-        loop
-        onClick={handlePlayPause}
-        muted
-        playsInline
-      />
+      <div className="h-full flex justify-center">
+        <video
+          ref={videoRef}
+          className="rounded-lg w-full h-auto"
+          src={videoUrl}
+          loop
+          playsInline
+          onClick={handlePlayPause}
+        />
+      </div>
 
+      {/* Controls */}
       <div
         className={`px-4 absolute inset-0 flex flex-col justify-end transition-opacity duration-300 bg-gradient-to-t from-black/60 via-black/20 to-transparent ${
           showControls ? "opacity-100" : "opacity-0"
