@@ -146,7 +146,7 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
           src={videoUrl}
           loop
           playsInline
-          
+          muted
           onClick={handlePlayPause}
         />
       </div>
