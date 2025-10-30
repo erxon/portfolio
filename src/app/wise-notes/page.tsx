@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import GitHubIcon from "../components/GitHubIcon";
-import Features from "../sections/wise-notes-sections/features";
+import Features from "../sections/wise-notes-sections/Features";
 
 export default function Page() {
   return (
