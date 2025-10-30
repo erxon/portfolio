@@ -1,4 +1,4 @@
-import VideoPlayer from "@/app/components/videoPlayer";
+import VideoPlayer from "@/app/components/VideoPlayer";
 
 interface Feature {
   title: string;
