@@ -146,6 +146,7 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
           src={videoUrl}
           loop
           playsInline
+          
           onClick={handlePlayPause}
         />
       </div>
