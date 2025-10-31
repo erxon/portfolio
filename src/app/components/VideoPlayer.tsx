@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Fullscreen, Minimize, PauseIcon, PlayIcon } from "lucide-react";
+import { FullscreenIcon, Minimize, PauseIcon, PlayIcon } from "lucide-react";
 import React, { useRef, useState, useEffect, MouseEvent } from "react";
+import { useTheme } from "next-themes";
 
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
@@ -13,6 +14,7 @@ const formatTime = (time: number): string => {
 };
 
 export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
+  const { theme } = useTheme();
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const progressBarRef = useRef<HTMLDivElement | null>(null);
@@ -183,14 +185,22 @@ export default function VideoPlayer({ videoUrl }: { videoUrl: string }) {
 
         <div className="flex items-center gap-3 w-full px-4 py-1 opacity-75 transition hover:opacity-100">
           <Button onClick={handlePlayPause}>
-            {isPlaying ? <PauseIcon fill="white" /> : <PlayIcon fill="white" />}
+            {isPlaying ? (
+              <PauseIcon fill="white" />
+            ) : (
+              <PlayIcon fill={theme === "dark" ? "black" : "white"} />
+            )}
           </Button>
 
           <Button
             onClick={handleFullscreenToggle}
             className="ml-auto text-white px-3 py-2 rounded-md"
           >
-            {isFullscreen ? <Minimize /> : <Fullscreen />}
+            {isFullscreen ? (
+              <Minimize stroke={theme === "dark" ? "black" : "white"} />
+            ) : (
+              <FullscreenIcon stroke={theme === "dark" ? "black" : "white"} />
+            )}
           </Button>
         </div>
       </div>

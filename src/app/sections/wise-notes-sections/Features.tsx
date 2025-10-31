@@ -21,19 +21,21 @@ const features: Feature[] = [
   },
   {
     title: "Notebooks",
-    description: "",
+    description: "Notebooks are a way to organize the notes you create.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812189/WiseNotes/5_WiseNotes_Notebook_ves5cw.mp4",
   },
   {
     title: "Bin",
-    description: "",
+    description:
+      "The bin is where the deleted notes are stored before deciding to delete them permanently or recover them.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812184/WiseNotes/6_WiseNotes_Bin_tlpwsg.mp4",
   },
   {
     title: "Ask AI",
-    description: "",
+    description:
+      "This is the highlight of Wise Notes. You can ask AI to generate notes for you based on your notes. Currently, we use OpenAI's GPT-3.5 turbo model.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812209/WiseNotes/7_WiseNotes_AskAI_Functionality_pvnz0m.mp4",
   },
@@ -42,25 +44,25 @@ const features: Feature[] = [
 const userInterfaceFeatures: Feature[] = [
   {
     title: "Infinite Scrolling",
-    description: "",
+    description: "In the UI, we have infinite scrolling for pagination.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812046/WiseNotes/3_WiseNotes_Pagination_msux3n.mp4",
   },
   {
-    title: "Drag & Drop",
-    description: "",
+    title: "Drag and Drop",
+    description: "Gives freedom to users to move notes around.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812121/WiseNotes/4_WiseNotes_DragAndDrop_yn0bfj.mp4",
   },
   {
     title: "View Switching",
-    description: "",
+    description: "The user can switch views as to how they want to view their notes.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812097/WiseNotes/8_WiseNotes_ViewSwitching_fnti5l.mp4",
   },
   {
     title: "Dark Mode",
-    description: "",
+    description: "The UI can also be viewed in dark mode.",
     videoUrl:
       "https://res.cloudinary.com/dg0cwy8vx/video/upload/v1761812037/WiseNotes/9_WiseNotes_LightAndDarkMode_s8zg5e.mp4",
   },
@@ -79,7 +81,7 @@ function FeatureTemplate({
     <div>
       <div className="mb-8">
         <p className="text-xl font-bold mb-2">{title}</p>
-        <p className="text-neutral-500">{description}</p>
+        <p className="text-neutral-500 dark:text-neutral-300">{description}</p>
       </div>
       <VideoPlayer videoUrl={videoUrl} />
     </div>
