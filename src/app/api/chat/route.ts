@@ -1,15 +1,8 @@
 import { openai } from "@ai-sdk/openai";
 import { streamText, convertToModelMessages } from "ai";
 import { portfolioData } from "@/lib/portfolio-data";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
 import { headers } from "next/headers";
-
-export const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(5, "10 s"),
-  analytics: true,
-});
+import { ratelimit } from "@/lib/ratelimit";
 
 export const maxDuration = 30; // Allow streaming to run for up to 30 seconds
 
@@ -38,15 +31,7 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: openai("gpt-4o-mini"), // Cheaper and faster for a portfolio
-    messages: coreMessages.map((m) => ({
-      ...m,
-      content:
-        m.content ||
-        (m as any).parts
-          ?.map((p: any) => (p.type === "text" ? p.text : ""))
-          .join("") ||
-        "",
-    })),
+    messages: coreMessages,
     system: `You are a helpful assistant on Ericson Castasus's portfolio. You should speak as Ericson Castasus. 
       Answer questions about their skills in React, Next.js, and design. Here is some information about them: ${portfolioData}
 

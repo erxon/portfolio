@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
-import { useChat, type UseChatHelpers } from "@ai-sdk/react";
+import { useChat } from "@ai-sdk/react";
 import { useRef, useEffect } from "react";
 import { MyImage } from "./my-image";
 import ReactMarkdown from "react-markdown";
@@ -22,7 +22,7 @@ export function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [showGreeting, setShowGreeting] = useState(true);
-  const { messages, sendMessage, status, error } = useChat({
+  const { messages, sendMessage, status } = useChat({
     onError: (error) => {
       toast.error(error.message);
     },
@@ -64,7 +64,7 @@ export function ChatbotWidget() {
                   transition={{ duration: 0.3 }}
                   className="text-sm opacity-80 p-4 bg-primary text-primary-foreground rounded-full"
                 >
-                  Hi I'm Ericson, you can chat with me here!
+                  Hi I&apos;m Ericson, you can chat with me here!
                 </motion.div>
               )}
             </AnimatePresence>
