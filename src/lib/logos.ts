@@ -121,7 +121,7 @@ const logos = {
     },
     {
       id: 21,
-      src: "/logo/jest.png",
+      src: "/logo/Jest.png",
       srcDark: "",
       alt: "Jest logo",
       name: "Jest",
