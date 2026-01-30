@@ -25,7 +25,7 @@ function Logo({
   }, [theme]);
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-4">
       {currentTheme === "dark" ? (
         <Image
           className="logo"
@@ -38,7 +38,7 @@ function Logo({
         <Image className="logo" src={src} alt={alt} width={32} height={32} />
       )}
 
-      <p className="text-xs font-semibold hyphens-auto text-wrap">{logoName}</p>
+      <p className="text-sm font-semibold hyphens-auto text-wrap">{logoName}</p>
     </div>
   );
 }
@@ -53,13 +53,12 @@ export default function SkillsAndTech() {
         className="px-6 md:px-12 lg:px-[20%] mb-12 lg:mb-24"
       >
         <p className="font-bold text-3xl mb-2">STACK</p>
-        <p className="text-neutral-500 dark:text-neutral-300 text-sm w-full md:w-1/2">
+        <p className="text-neutral-500 dark:text-neutral-300 text-lg w-full md:w-1/2">
           My tools are focused on{" "}
           <span className="text-zinc-900 font-medium dark:text-white">
             speed and developer experience
           </span>{" "}
-          so I could focus more on solving problems. My tech revolves in
-          JavaScript, NoSQL, and SQL
+          so I could focus more on solving problems.
         </p>
       </motion.div>
       <div className="px-6 md:px-12 lg:px-[20%] flex flex-col gap-12">
@@ -70,7 +69,7 @@ export default function SkillsAndTech() {
           className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
         >
           <div className="mb-4 lg:m-0 lg:col-span-1">
-            <p className="text-sm">FRONT-END</p>
+            <p className="text-md font-bold">FRONT-END</p>
           </div>
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {logos.frontend.map((logo) => (
@@ -91,7 +90,7 @@ export default function SkillsAndTech() {
           className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
         >
           <div className="mb-4 lg:m-0 lg:col-span-1">
-            <p className="text-sm">BACK-END</p>
+            <p className="text-md font-bold">BACK-END</p>
           </div>
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {logos.backend.map((logo) => (
@@ -112,52 +111,31 @@ export default function SkillsAndTech() {
           className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
         >
           <div className="mb-4 lg:m-0 lg:col-span-1">
-            <p className="text-sm">TOOLS</p>
+            <p className="text-md font-bold">DATABASE</p>
+          </div>
+          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {logos.database.map((logo) => (
+              <Logo
+                key={logo.id}
+                src={logo.src}
+                srcDark={logo.srcDark}
+                alt={logo.alt}
+                logoName={logo.name}
+              />
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
+        >
+          <div className="mb-4 lg:m-0 lg:col-span-1">
+            <p className="text-md font-bold">TOOLS</p>
           </div>
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {logos.tools.map((logo) => (
-              <Logo
-                key={logo.id}
-                src={logo.src}
-                srcDark={logo.srcDark}
-                alt={logo.alt}
-                logoName={logo.name}
-              />
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
-        >
-          <div className="mb-4 lg:m-0 lg:col-span-1">
-            <p className="text-sm">AI INTEGRATIONS</p>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {logos.aiIntegrations.map((logo) => (
-              <Logo
-                key={logo.id}
-                src={logo.src}
-                srcDark={logo.srcDark}
-                alt={logo.alt}
-                logoName={logo.name}
-              />
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="flex flex-col lg:grid lg:grid-cols-6 lg:gap-6"
-        >
-          <div className="mb-4 lg:m-0 lg:col-span-1">
-            <p className="text-sm">OTHERS</p>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {logos.others.map((logo) => (
               <Logo
                 key={logo.id}
                 src={logo.src}

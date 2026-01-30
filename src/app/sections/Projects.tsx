@@ -23,7 +23,7 @@ function Project({
   imagesrc: string;
   technologies: string[];
   liveDemoLink: string;
-  gitHubLink: string;
+  gitHubLink?: string;
 }) {
   return (
     <motion.div className="mx-auto w-full lg:w-250 p-4 lg:relative">
@@ -56,7 +56,7 @@ function Project({
           height={120}
           className="rounded-lg mx-auto mb-4"
         />
-        <p className="text-center text-sm ">{projectName}</p>
+        <p className="text-center text-lg font-semibold">{projectName}</p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
@@ -111,14 +111,16 @@ function Project({
           >
             <SquareArrowOutUpRight /> Live demo
           </Button>
-          <Button
-            className="shadow-lg"
-            onClick={() => {
-              window.open(gitHubLink);
-            }}
-          >
-            <GitHubIcon /> GitHub
-          </Button>
+          {gitHubLink && (
+            <Button
+              className="shadow-lg"
+              onClick={() => {
+                window.open(gitHubLink);
+              }}
+            >
+              <GitHubIcon /> GitHub
+            </Button>
+          )}
         </motion.div>
       </motion.div>
     </motion.div>
@@ -132,8 +134,8 @@ export default function Projects() {
       <Project
         key={0}
         themeColor="#00adb4"
-        backgroundColorClass="gather-project"
-        projectName="Gather: A System To Aid Missing Persons Management with Face Recognition and Map"
+        backgroundColorClass="bg-cyan-200 dark:bg-cyan-800"
+        projectName="Gather: A System To Aid Missing Persons Management"
         description="Gather is an information system that deals with missing person management. 
         This system is intended for authorities such as Police and Baranggay officials. It uses Face Recognition and Maps.
         Imagga API was used in Face Recognition and Mapbox is used for mapping and routes."
@@ -152,8 +154,8 @@ export default function Projects() {
       <Project
         key={1}
         themeColor="#d0d2d6"
-        backgroundColorClass="wise-notes-project"
-        projectName="Wise Notes: A Notes App That Learns"
+        backgroundColorClass="bg-gray-200 dark:bg-gray-800"
+        projectName="Wise Notes: AI-Powered RAG Knowledge Base & Second Brain"
         description="Wise Notes is a web-based note application with RAG (Retrieval-Augmented Generation) to learn from the user's notes. 
         It uses LangChain, Groq, and Huggingface API. Users can generate new ideas and knowledges based on their notes."
         imagesrc="/projects-logo/wise-notes.png"
@@ -164,6 +166,8 @@ export default function Projects() {
           "LangChain",
           "Huggingface",
           "Groq",
+          "AWS",
+          "Docker"
         ]}
         liveDemoLink="/wise-notes"
         gitHubLink="https://github.com/erxon/wise-notes-v2.git"
@@ -171,13 +175,15 @@ export default function Projects() {
       <Project
         key={2}
         themeColor="#868cb0"
-        backgroundColorClass="moments-project"
-        projectName="Moments: Photos Worth Sharing"
-        description="Moments is a web application where users can create galleries that stores their photos. This gallery is shareable and can be visible to any people they want."
-        imagesrc="/projects-logo/moments.png"
-        technologies={["TypeScript", "ReactJS", "NextJS", "Supabase"]}
-        liveDemoLink="https://moments-delta-seven.vercel.app/"
-        gitHubLink="https://github.com/erxon/moments"
+        backgroundColorClass="bg-purple-200 dark:bg-purple-800"
+        projectName="OpsAI: Intelligent Enterprise Automation for AI Invoice Processing"
+        description="OpsAI is an end-to-end automation engine designed to eliminate manual data entry and back-office bottlenecks. 
+Built with an agentic architecture, it doesn't just read data, it understands context, validates information against existing records, and executes workflows autonomously.
+I have created this system using Next.js, Supabase, LangChain, Groq, and Huggingface API. 
+I have deployed the backend using AWS App Runner ECS. I containerize the backend first using Docker."
+        imagesrc="/projects-logo/opsai.png"
+        technologies={["TypeScript", "ReactJS", "NextJS", "Supabase", "LangGraph", "Python", "FastAPI", "AWS", "Docker"]}
+        liveDemoLink="https://opsai-gilt.vercel.app/"
       />
       <motion.div
         initial={{ opacity: 0 }}
@@ -195,11 +201,35 @@ export default function Projects() {
             variant="link"
             size={"sm"}
             onClick={() => {
-              window.open("https://judelu-ma2k8cjil-erxons-projects.vercel.app/");
+              window.open(
+                "https://judelu-ma2k8cjil-erxons-projects.vercel.app/",
+              );
             }}
           >
             <SquareArrowOutUpRight />
             Live
+          </Button>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="py-4"
+      >
+        <div className="flex gap-4 items-center border-b-2 mb-4 w-full md:w-1/2 lg:w-1/4">
+          <p className="grow-1">Agentic Product Sourcing</p>
+          <Button
+            variant="link"
+            size={"sm"}
+            onClick={() => {
+              window.open(
+                "https://github.com/erxon/product_sourcing_agent/",
+              );
+            }}
+          >
+            <GitHubIcon reverse />
+            GitHub
           </Button>
         </div>
       </motion.div>

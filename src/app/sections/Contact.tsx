@@ -10,22 +10,18 @@ import GitHubIcon from "../components/GitHubIcon";
 
 export default function Contact() {
   return (
-    <div className="py-12 p-6 md:px-12 lg:px-[20%]">
+    <div className="py-12 p-6 md:px-12 lg:px-[20%] h-[50vh] flex flex-col justify-center">
       <p className="font-bold text-2xl mb-8">GET IN TOUCH</p>
+      <p className="text-3xl font-semibold mb-8">
+        Let&apos;s build the future of your business, one intelligent solution at
+        a time.
+      </p>
       <div>
-        <div className="flex gap-2 items-center">
-          <MailIcon className="w-4 h-4" />
-          <p>ericsoncastasus@outlook.com</p>
-        </div>
-
-        <div className="flex gap-2 items-center">
-          <PhoneIcon className="w-4 h-4" />
-          <p className="text-sm">+63 962 944 8634</p>
-        </div>
-        <div className="flex flex-row gap-2 my-2">
+        <div className="flex flex-row gap-4 my-2 items-center">
+          <p className="text-md font-bold">Ericson Castasus</p>
           <Button
             variant={"ghost"}
-            size={"icon"}
+            size={"icon-lg"}
             onClick={() => {
               window.open("https://web.facebook.com/ericson.castasus/");
             }}
@@ -34,7 +30,7 @@ export default function Contact() {
           </Button>
           <Button
             variant={"ghost"}
-            size={"icon"}
+            size={"icon-lg"}
             onClick={() => {
               window.open("https://www.instagram.com/ericson.castasus/");
             }}
@@ -43,7 +39,7 @@ export default function Contact() {
           </Button>
           <Button
             variant={"ghost"}
-            size={"icon"}
+            size={"icon-lg"}
             onClick={() => {
               window.open("https://www.linkedin.com/in/ericson-castasus/");
             }}
@@ -52,11 +48,22 @@ export default function Contact() {
           </Button>
           <Button
             variant={"ghost"}
-            size={"icon"}
+            size={"icon-lg"}
             onClick={() => window.open("https://github.com/erxon")}
           >
             <GitHubIcon reverse />
           </Button>
+          <div>
+            <div className="flex gap-2 items-center">
+              <MailIcon className="w-4 h-4" />
+              <p>ericsoncastasus@outlook.com</p>
+            </div>
+
+            <div className="flex gap-2 items-center">
+              <PhoneIcon className="w-4 h-4" />
+              <p className="text-sm">+63 962 944 8634</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

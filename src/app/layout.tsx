@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ChatbotWidget } from "@/components/chatbot-widget";
@@ -7,6 +7,11 @@ import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--inter-font",
+  subsets: ["latin"],
+});
+
+const josefin = Josefin_Sans({
+  variable: "--josefin-font",
   subsets: ["latin"],
 });
 
@@ -25,7 +30,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${inter.variable} ${inter.variable} antialiased`}>
+      <body className={`${josefin.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -2,75 +2,61 @@ const logos = {
   frontend: [
     {
       id: 1,
-      src: "/logo/html-5.png",
-      srcDark: "",
-      alt: "HTML Logo",
-      name: "HTML",
-    },
-    {
-      id: 2,
-      src: "/logo/css-3.png",
-      srcDark: "",
-      alt: "CSS Logo",
-      name: "CSS",
-    },
-    {
-      id: 3,
-      src: "/logo/bootstrap.png",
-      srcDark: "",
-      alt: "Bootstrap Logo",
-      name: "Bootstrap",
-    },
-    {
-      id: 4,
       src: "/logo/tailwind-css.png",
       srcDark: "",
       alt: "Tailwind CSS",
       name: "Tailwind CSS",
     },
     {
-      id: 6,
+      id: 2,
       src: "/logo/react.png",
       srcDark: "",
       alt: "React JS logo",
       name: "React JS",
     },
     {
-      id: 7,
+      id: 3,
       src: "/logo/nextjs.png",
       srcDark: "/logo/nextjs-dark.png",
       alt: "Next JS logo",
       name: "Next JS",
     },
     {
-      id: 8,
+      id: 4,
       src: "/logo/js.png",
       srcDark: "",
       alt: "JavaScript logo",
       name: "JavaScript",
     },
     {
-      id: 9,
+      id: 5,
       src: "/logo/typescript.png",
       srcDark: "",
       alt: "TypeScript logo",
       name: "TypeScript",
     },
+    {
+      id: 6,
+      src: "/tech-highlights/langgraph-color.png",
+      srcDark: "",
+      alt: "LangGraph logo",
+      name: "LangGraph",
+    },
   ],
   backend: [
+    {
+      id: 9,
+      src: "/logo/python-logo-only.png",
+      srcDark: "",
+      alt: "Python logo",
+      name: "Python",
+    },
     {
       id: 10,
       src: "/logo/nodejs.png",
       srcDark: "",
       alt: "Node JS logo",
       name: "Node JS",
-    },
-    {
-      id: 11,
-      src: "/logo/mongoose.png",
-      srcDark: "",
-      alt: "Mongoose logo",
-      name: "Mongoose",
     },
     {
       id: 12,
@@ -99,10 +85,10 @@ const logos = {
   tools: [
     {
       id: 15,
-      src: "/logo/render.jpg",
-      srcDark: "",
-      alt: "Render logo",
-      name: "Render",
+      src: "/tech-highlights/aws-color-light.png",
+      srcDark: "/tech-highlights/aws-color.png",
+      alt: "AWS logo",
+      name: "AWS",
     },
     {
       id: 16,
@@ -128,51 +114,26 @@ const logos = {
     },
     {
       id: 20,
-      src: "/logo/figma.png",
+      src: "/logo/langsmith-color.png",
       srcDark: "",
-      alt: "Figma logo",
-      name: "Figma",
+      alt: "LangSmith logo",
+      name: "LangSmith",
     },
-  ],
-  aiIntegrations: [
     {
       id: 21,
-      src: "/logo/groq.png",
-      srcDark: "/logo/groq-dark.png",
-      alt: "Groq logo",
-      name: "Groq",
+      src: "/logo/jest.png",
+      srcDark: "",
+      alt: "Jest logo",
+      name: "Jest",
     },
     {
       id: 22,
-      src: "/logo/hf.png",
+      src: "/logo/docker-mark-blue.png",
       srcDark: "",
-      alt: "Huggingface logo",
-      name: "Huggingface",
-    },
-    {
-      id: 23,
-      src: "/logo/langchain.png",
-      srcDark: "",
-      alt: "LangChain logo",
-      name: "LangChain",
-    },
-  ],
-  others: [
-    {
-      id: 24,
-      src: "/logo/pusherjs.png",
-      srcDark: "",
-      alt: "Pusher JS logo",
-      name: "Pusher",
-    },
-    {
-      id: 25,
-      src: "/logo/mapbox.png",
-      srcDark: "",
-      alt: "Mapbox logo",
-      name: "Mapbox",
-    },
-  ],
+      alt: "Docker logo",
+      name: "Docker",
+    }
+  ]
 };
 
 export default logos;
