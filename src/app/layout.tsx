@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Josefin_Sans } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ChatbotWidget } from "@/components/chatbot-widget";
 import { Toaster } from "sonner";
-
-const inter = Inter({
-  variable: "--inter-font",
-  subsets: ["latin"],
-});
 
 const josefin = Josefin_Sans({
   variable: "--josefin-font",
