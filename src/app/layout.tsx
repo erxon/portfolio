@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ChatbotWidget } from "@/components/chatbot-widget";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--inter-font",
@@ -31,6 +33,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <ChatbotWidget />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
