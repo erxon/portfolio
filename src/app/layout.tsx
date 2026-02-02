@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ChatbotWidget } from "@/components/chatbot-widget";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 const josefin = Josefin_Sans({
   variable: "--josefin-font",
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
           <ChatbotWidget />
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
