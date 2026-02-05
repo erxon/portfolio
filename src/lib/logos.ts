@@ -35,13 +35,6 @@ const logos = {
       alt: "TypeScript logo",
       name: "TypeScript",
     },
-    {
-      id: 6,
-      src: "/tech-highlights/langgraph-color.png",
-      srcDark: "",
-      alt: "LangGraph logo",
-      name: "LangGraph",
-    },
   ],
   backend: [
     {
@@ -53,6 +46,13 @@ const logos = {
     },
     {
       id: 10,
+      src: "/logo/FastAPI.png",
+      srcDark: "",
+      alt: "FastAPI logo",
+      name: "FastAPI",
+    },
+    {
+      id: 11,
       src: "/logo/nodejs.png",
       srcDark: "",
       alt: "Node JS logo",
@@ -64,6 +64,13 @@ const logos = {
       srcDark: "/logo/express-dark.png",
       alt: "Express logo",
       name: "Express",
+    },
+    {
+      id: 13,
+      src: "/tech-highlights/langgraph-color.png",
+      srcDark: "",
+      alt: "LangGraph logo",
+      name: "LangGraph",
     },
   ],
   database: [

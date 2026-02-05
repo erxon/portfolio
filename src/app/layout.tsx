@@ -12,8 +12,8 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ericson's Portfolio",
-  description: "Ericson's portfolio of projects",
+  title: "Ericson Castasus",
+  description: "Ericson Castasus's portfolio. Contains my projects, skills, and more.",
 };
 
 export default function RootLayout({
