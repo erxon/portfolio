@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ChatbotWidget } from "@/components/chatbot-widget";
 import { Toaster } from "sonner";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const josefin = Josefin_Sans({
   variable: "--josefin-font",
@@ -13,7 +13,8 @@ const josefin = Josefin_Sans({
 
 export const metadata: Metadata = {
   title: "Ericson Castasus",
-  description: "Ericson Castasus's portfolio. Contains my projects, skills, and more.",
+  description:
+    "Ericson Castasus's portfolio. Contains my projects, skills, and more.",
 };
 
 export default function RootLayout({

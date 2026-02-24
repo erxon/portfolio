@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { SquareArrowOutUpRight } from "lucide-react";
 import GitHubIcon from "../components/GitHubIcon";
+import Link from "next/link";
 
 function Project({
   themeColor,
@@ -15,6 +16,7 @@ function Project({
   technologies,
   liveDemoLink,
   gitHubLink,
+  seeMoreLink,
 }: {
   themeColor: string;
   backgroundColorClass: string;
@@ -24,6 +26,8 @@ function Project({
   technologies: string[];
   liveDemoLink: string;
   gitHubLink?: string;
+  detailsDialog?: React.ReactNode;
+  seeMoreLink: string;
 }) {
   return (
     <motion.div className="mx-auto w-full lg:w-250 p-4 lg:relative">
@@ -79,7 +83,13 @@ function Project({
         transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
         className="w-full lg:w-[600px] h-fit md:h-[350px] box-border pt-32 md:pt-12 lg:pl-12 lg:pr-4 px-4 pb-4 bg-white dark:bg-neutral-800 shadow-sm relative md:top-[-100] lg:left-90 flex flex-col justify-center"
       >
-        <p className="tracking-wide mb-8 text-sm">{description}</p>
+        <p className="tracking-wide mb-8 text-sm">
+          {description}
+          <Link href={seeMoreLink} className="hover:underline ml-2 font-bold">
+            See more
+          </Link>
+        </p>
+
         <div className="flex gap-2 text-xs mb-4 box-border flex-wrap">
           {technologies.map((item) => (
             <p
@@ -150,6 +160,7 @@ export default function Projects() {
         ]}
         liveDemoLink="https://gather-plum.vercel.app/home"
         gitHubLink="https://github.com/erxon/gather"
+        seeMoreLink="/projects/gather"
       />
       <Project
         key={1}
@@ -167,10 +178,11 @@ export default function Projects() {
           "Huggingface",
           "Groq",
           "AWS",
-          "Docker"
+          "Docker",
         ]}
         liveDemoLink="/wise-notes"
         gitHubLink="https://github.com/erxon/wise-notes-v2.git"
+        seeMoreLink="/projects/wise-notes"
       />
       <Project
         key={2}
@@ -182,8 +194,19 @@ Built with an agentic architecture, it doesn't just read data, it understands co
 I have created this system using Next.js, Supabase, LangChain, Groq, and Huggingface API. 
 I have deployed the backend using AWS App Runner ECS. I containerize the backend first using Docker."
         imagesrc="/projects-logo/opsai.png"
-        technologies={["TypeScript", "ReactJS", "NextJS", "Supabase", "LangGraph", "Python", "FastAPI", "AWS", "Docker"]}
+        technologies={[
+          "TypeScript",
+          "ReactJS",
+          "NextJS",
+          "Supabase",
+          "LangGraph",
+          "Python",
+          "FastAPI",
+          "AWS",
+          "Docker",
+        ]}
         liveDemoLink="https://opsai-gilt.vercel.app/"
+        seeMoreLink="/projects/opsai"
       />
       <motion.div
         initial={{ opacity: 0 }}
@@ -223,9 +246,7 @@ I have deployed the backend using AWS App Runner ECS. I containerize the backend
             variant="link"
             size={"sm"}
             onClick={() => {
-              window.open(
-                "https://github.com/erxon/product_sourcing_agent/",
-              );
+              window.open("https://github.com/erxon/product_sourcing_agent/");
             }}
           >
             <GitHubIcon reverse />

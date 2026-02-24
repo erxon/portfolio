@@ -86,8 +86,8 @@ export default function Home() {
             <Image
               src="/logo/nextjs.png"
               alt="Next.js"
-              width={52}
-              height={52}
+              width={36}
+              height={36}
               className="hover:scale-110 transition-all duration-300"
             />
           </div>
