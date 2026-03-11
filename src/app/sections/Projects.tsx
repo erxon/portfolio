@@ -3,9 +3,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight, PlaySquareIcon } from "lucide-react";
 import GitHubIcon from "../components/GitHubIcon";
-import Link from "next/link";
 
 function Project({
   themeColor,
@@ -16,7 +15,7 @@ function Project({
   technologies,
   liveDemoLink,
   gitHubLink,
-  seeMoreLink,
+  youtubeLink,
 }: {
   themeColor: string;
   backgroundColorClass: string;
@@ -27,7 +26,7 @@ function Project({
   liveDemoLink: string;
   gitHubLink?: string;
   detailsDialog?: React.ReactNode;
-  seeMoreLink: string;
+  youtubeLink?: string;
 }) {
   return (
     <motion.div className="mx-auto w-full lg:w-250 p-4 lg:relative">
@@ -83,12 +82,7 @@ function Project({
         transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
         className="w-full lg:w-[600px] h-fit md:h-[350px] box-border pt-32 md:pt-12 lg:pl-12 lg:pr-4 px-4 pb-4 bg-white dark:bg-neutral-800 shadow-sm relative md:top-[-100] lg:left-90 flex flex-col justify-center"
       >
-        <p className="tracking-wide mb-8 text-sm">
-          {description}
-          <Link href={seeMoreLink} className="hover:underline ml-2 font-bold">
-            See more
-          </Link>
-        </p>
+        <p className="tracking-wide mb-8 text-sm">{description}</p>
 
         <div className="flex gap-2 text-xs mb-4 box-border flex-wrap">
           {technologies.map((item) => (
@@ -121,6 +115,16 @@ function Project({
           >
             <SquareArrowOutUpRight /> Live demo
           </Button>
+          {youtubeLink && (
+            <Button
+              className="shadow-lg md:mr-2"
+              onClick={() => {
+                window.open(youtubeLink);
+              }}
+            >
+              <PlaySquareIcon /> Video Demo
+            </Button>
+          )}
           {gitHubLink && (
             <Button
               className="shadow-lg"
@@ -160,7 +164,7 @@ export default function Projects() {
         ]}
         liveDemoLink="https://gather-plum.vercel.app/home"
         gitHubLink="https://github.com/erxon/gather"
-        seeMoreLink="/projects/gather"
+        youtubeLink="https://www.youtube.com/watch?v=k7fx3SFPhU4"
       />
       <Project
         key={1}
@@ -182,7 +186,6 @@ export default function Projects() {
         ]}
         liveDemoLink="/wise-notes"
         gitHubLink="https://github.com/erxon/wise-notes-v2.git"
-        seeMoreLink="/projects/wise-notes"
       />
       <Project
         key={2}
@@ -206,7 +209,6 @@ I have deployed the backend using AWS App Runner ECS. I containerize the backend
           "Docker",
         ]}
         liveDemoLink="https://opsai-gilt.vercel.app/"
-        seeMoreLink="/projects/opsai"
       />
       <motion.div
         initial={{ opacity: 0 }}
