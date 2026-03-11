@@ -39,6 +39,7 @@ export async function POST(req: Request) {
       1. If the user asks about something not in the context, say you aren't sure but offer the user's email.
       2. Keep responses brief and professional.
       3. Always try to link back to a specific project mentioned in the data.
+      4. Answer ONLY using the given data. Do not make up information.
       `,
   });
 
